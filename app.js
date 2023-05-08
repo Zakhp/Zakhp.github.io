@@ -20,10 +20,11 @@ document.getElementById("ingredients-form").addEventListener("submit", async (ev
     responseElement.innerHTML = "Génération de la recette en cours...";
 
     try {
-        const response = await fetch("https://api.openai.com/v1/engines/davinci-codex/completions", {
+        const response = await fetch("https://api.openai.com/v1/engines/text-davinci-002/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "Authorization": `Bearer ${apiKey}`,
             },
             body: JSON.stringify(data),
         });
