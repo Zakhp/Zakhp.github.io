@@ -8,7 +8,7 @@ document.getElementById("ingredients-form").addEventListener("submit", async (ev
         return;
     }
 
-    const apiKey = "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";
+    const apiKey = "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";
     const prompt = `Créez une recette utilisant les ingrédients suivants: ${ingredient}.`;
     const data = {
         "api_key": apiKey,
